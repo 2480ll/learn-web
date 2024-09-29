@@ -1,0 +1,23 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*"
+    // "src/types/*.d.ts"  暂时没什么用
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": true,
+    // "noUnusedLocals": true,
+    // "noImplicitAny": false,将 any 类型的隐式导入视为警告而不是错误,将不会强制执行隐式 any 类型的检查，这意味着即使在没有类型声明文件的情况下，也不会报错
+    "noImplicitAny": false,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    //"vite-plugin-svg-icons/client" 的ts,vite-plugin-svg-icons这个依赖的说明文档中，使用ts要在type加上这个，但是不知为啥加上就报错，报没有找到,说明文档说是在这个文件中，但是根据情况来看，应该是这个tsconfig.json
+    "types": ["node"]
+  }
+}

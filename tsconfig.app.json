@@ -1,0 +1,16 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "strict": true, // 严格模式,强制执行类型检查
+    "noUnusedLocals": true, // 用于指定是否在编译过程中检查未使用的局部变量。
+    "noImplicitAny": false, //关闭 TypeScript 的隐式 any 类型检查
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/* 定义一些公共的css数据 */
+:root {
+  --el-aside-max-width: 200px;
+  --el-aside-min-width: 64px;
+  --el-aside-width: 200px;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+/* html 很关键，得加上，要不然高度不是100% */
+html,
+body {
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  /* 定义渐变 */
+  background-image: linear-gradient(to bottom, #e3effe, #f6f9ff);
+  /* 其他样式属性 */
+  width: 100%;
+  height: 100%; /* 例如，设置高度为视口的高度 */
+  /* 超出隐藏 */
+  overflow: hidden;
+
+  /* 和文字有关 */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* 定义#app的宽高 */
+  & > #app {
+    width: 100%;
+    height: 100%;
+  }
+}
+

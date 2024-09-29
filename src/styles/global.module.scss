@@ -1,0 +1,10 @@
+/**global.module.scss
+*把css变量导出，在js使用
+*/
+@import './variables.scss';
+// 导出变量
+:export {
+  namespace: $namespace;
+  elNamespace: $elNamespace;
+  components: $components;
+}
