@@ -81,10 +81,10 @@ export default defineConfig(({ command, mode }) => {
       viteMockServe({
         mockPath: './src/config/mock', ///设置模拟文件的存储文件夹./src/config/mock/modules和./src/config/mock 都行
         enable: true,
-        configPath: `
-        import {setupProdMockServer} from './src/config/mock/mockProdServer.ts';
-        setupProdMockServer();
-        ` // 这个有值，mockPath就没用了
+        // configPath: `
+        // import {setupProdMockServer} from './src/config/mock/mockProdServer.ts';
+        // setupProdMockServer();
+        // ` // 这个有值，mockPath就没用了
       })
     ],
     resolve: {
